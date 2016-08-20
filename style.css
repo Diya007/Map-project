@@ -1,0 +1,13 @@
+h1,.type-zip,.submit{
+	text-align: center;
+	font-family: 'Denk One', sans-serif;
+}
+
+#map{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	width:60%;
+	height: 500px;
+	background-color: lightgray;
+}
