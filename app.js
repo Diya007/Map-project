@@ -41,11 +41,27 @@ $(function(){
 	}
 //set lat and lng as pins on google map	
 	function getPosition(results){
-		console.log(results)
+		console.log(results.length)
+		
+		var lat1
+		var lng1
 		results.map(function(result){
+
 			if(result.venue&&result.venue.lat &&result.venue.lon){
 				var lat=result.venue.lat;
 				var lng= result.venue.lon;
+
+				if(typeof lat1 === "undefined"){
+					lat1=lat 
+					lng1=lng
+					var centerPosition = {
+						lat:lat1,
+						lng:lng1
+					}
+					map.setCenter(centerPosition)
+				}
+
+
 				//console.log(moment(result.time)._d)
 				var contentString = '<div id="content"><p>Event name: '+result.name+'</p>'+'<p>Address: '+result.venue.address_1+', '+result.venue.city+'</p>'+'<p>'+result.description+'</p>'+'<a href='+result.event_url+'>Links</a></div>'
 				var LatLng = {
@@ -60,6 +76,7 @@ $(function(){
 					animation: google.maps.Animation.DROP
 				})
 				markers.push(marker)
+			
 				var information = new google.maps.InfoWindow({
 					content:contentString
 				})
@@ -70,16 +87,15 @@ $(function(){
 
 				})
 			}
-
+			
+			
 		})
-		var lat1= results[0].venue.lat;
-		var lng1= results[0].venue.lon;
-		var centerPosition = {
-			lat:lat1,
-			lng:lng1
+		
+		if(results.length==0){	
+			alert("No Pokemon meetup around")			
 		}
-		map.setCenter(centerPosition)
 		//clear search history 
+			
 
 	}
 
