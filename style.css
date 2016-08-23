@@ -11,3 +11,6 @@ h1,.type-zip,.submit{
 	height: 500px;
 	background-color: lightgray;
 }
+.hidden{
+	display: none;
+}
