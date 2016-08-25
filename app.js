@@ -64,8 +64,6 @@ $(function(){
 
 				//console.log(moment(result.time)._d)
 				var contentString = '<div id="content"><p>Event name: '+result.name+'</p>'+'<p>Address: '+result.venue.address_1+', '+result.venue.city+'</p>'+'<p>'+result.description+'</p>'+'<a href='+result.event_url+'>Links</a></div>'
-				//var contentString = $(".content").clone();
-				
 				var LatLng = {
 					lat:lat,
 					lng:lng,

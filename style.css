@@ -1,16 +1,72 @@
-h1,.type-zip,.submit{
+h1,.type-zip{
+
 	text-align: center;
 	font-family: 'Denk One', sans-serif;
+}
+
+.type-zip{
+	font-size: 20px;
+}
+
+header{
+	padding:20px;
+	background-color: orange;
+	margin-right: 50px;
+	margin-left:50px;
+	margin-bottom: 20px;
+}
+
+h1{
+	color:white;
+	margin-right: 350px;
+}
+
+.logo{
+	float: left;
+	margin-left:100px;
+
+}
+
+.ball{
+	float:right;
+	margin-right: 150px;
+	margin-top: -90px;
+}
+
+.type-zip{
+	color:white;
+}
+
+#zip{
+	padding:5px;
+}
+
+#sub{
+	background-color: green;
+	width:100px;
+	height: 30px;
+	border-radius: 8px;
+}
+
+body{
+	background-image: url("pictures/Pokemon-Hd-Wallpaper.jpg");
+	background-size: 1000px;
 }
 
 #map{
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 50px;
+	margin-top: 15px;
 	width:60%;
 	height: 500px;
 	background-color: lightgray;
 }
+
+/*@media only screen and (max-width: 500px) {
+    body {
+       background-size: 50%;
+    }*/
+
 .hidden{
 	display: none;
 }
