@@ -14,6 +14,9 @@ function initMap() {
         });
       }
 
+var audio = document.getElementById("music");
+	audio.play()
+
 $(function(){
 	$("#sub").on("click",function(e){
 		e.preventDefault();

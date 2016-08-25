@@ -4,20 +4,37 @@
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Denk+One" rel="stylesheet">
-	<title>find Pokemon meetups!</title>
+	<title>Catch a Pokémon meetup</title>
 </head>
+
 <body>
-	<h1>Find Pokemon meetups near you!</h1>
+	<header>
+		<img class="logo" src="pictures/logo.png" alt="logo" width="250px">
+		<h1>Catch a Pokémon meetup</h1>
+		<img class="ball" src="pictures/pokeball-logo.png" alt="ball" width="100px">
+	</header>
+
 	<div class="type-zip">Your zip code <input type="text" id="zip" name="zip">
-	<input type="submit" id="sub" name="sub"></div>
+	<input type="submit" id="sub" name="sub">
+	</div>
+
 	<div id="map"></div>
+
+	<audio id="music" src="http://xunlei.sc.chinaz.com/files/download/sound1/201409/4942.wav">
+
+	<!-- <div class="content hidden" >
+		<p>Event name: <span class="event-name"></span></p>
+		<p>Address: <span class="event-address"></span></p>
+		<p class="description"></p><a class="link" href="">Links</a>
+	</div>
+
+
 	<script>
-	</script>
+	</script> -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
 	<script type="text/javascript" src="moment.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB85rQQGvOiJbpX31z7CA9c2bkb3BRGwj0&callback=initMap">
 
 </script>
-
 </body>
