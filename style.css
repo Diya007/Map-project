@@ -8,24 +8,18 @@ h1,.type-zip{
 	font-size: 20px;
 }
 
-header{
-	padding:20px;
+ul{
+	margin-top: 0;
+	width: 100%;
+	overflow: hidden;
 	background-color: orange;
-	margin-right: 50px;
-	margin-left:50px;
-	margin-bottom: 20px;
 }
 
 h1{
 	color:white;
-	margin-right: 350px;
+	text-align: center;
 }
 
-.logo{
-	float: left;
-	margin-left:100px;
-
-}
 
 .ball{
 	float:right;
@@ -48,11 +42,6 @@ h1{
 	border-radius: 8px;
 }
 
-body{
-	background-image: url("pictures/Pokemon-Hd-Wallpaper.jpg");
-	background-size: 1000px;
-}
-
 #map{
 	margin-left: auto;
 	margin-right: auto;
@@ -62,10 +51,11 @@ body{
 	background-color: lightgray;
 }
 
-/*@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     body {
        background-size: 50%;
-    }*/
+    }
+}
 
 .hidden{
 	display: none;

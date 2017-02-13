@@ -4,7 +4,6 @@ var results
 var zip
 var markers=[]
 
-
 function initMap() {
         mapDiv = document.getElementById('map');
         map = new google.maps.Map(mapDiv, {
@@ -14,15 +13,13 @@ function initMap() {
         });
       }
 
-var audio = document.getElementById("music");
-	audio.play()
-
 $(function(){
 	$("#sub").on("click",function(e){
 		e.preventDefault();
 		deleteMarker();
 		meetupData();
 		zip==$('#zip').val("");
+		console.log(zip)
 	})
 	function meetupData(){
 		zip=$('#zip').val();
@@ -31,7 +28,7 @@ $(function(){
 			key:'742104225795b17715d16c3866306d',
 			country: 'us',
 			zip: zip,
-			topic: 'pokemon',
+			topic: 'javascript',
 			//can't get specific meetups according to zip, maybe get wrong prama
 			sign:'true',
 		}
@@ -39,6 +36,7 @@ $(function(){
 		$.getJSON(url,param,function(data){
 			//get lat and lng data
 		    results = data.results;
+		    console.log(results)
 			getPosition(results);
 		})
 	}
@@ -64,8 +62,6 @@ $(function(){
 					map.setCenter(centerPosition)
 				}
 
-
-				//console.log(moment(result.time)._d)
 				var contentString = '<div id="content"><p>Event name: '+result.name+'</p>'+'<p>Address: '+result.venue.address_1+', '+result.venue.city+'</p>'+'<p>'+result.description+'</p>'+'<a href='+result.event_url+'>Links</a></div>'
 				var LatLng = {
 					lat:lat,
@@ -83,22 +79,20 @@ $(function(){
 				var information = new google.maps.InfoWindow({
 					content:contentString
 				})
-				//can't get information of all the markers
+		
 				marker.addListener('click',function(){
 					information.open(map,marker);
 					//clear search history 
 
 				})
 			}
-			
-			
+				
 		})
 		
 		if(results.length==0){	
-			alert("No Pokemon meetup around")			
+			alert("No javascript meetup around")			
 		}
-		//clear search history 
-			
+		//clear search history 		
 
 	}
 
