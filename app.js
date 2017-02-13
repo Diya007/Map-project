@@ -14,6 +14,7 @@ function initMap() {
         });
       }
 
+
 $(function(){
 	$("#sub").on("click",function(e){
 		e.preventDefault();
