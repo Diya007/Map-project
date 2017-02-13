@@ -14,8 +14,6 @@ function initMap() {
         });
       }
 
-var audio = document.getElementById("music");
-	audio.play()
 
 $(function(){
 	$("#sub").on("click",function(e){
@@ -31,7 +29,7 @@ $(function(){
 			key:'742104225795b17715d16c3866306d',
 			country: 'us',
 			zip: zip,
-			topic: 'pokemon',
+			topic: 'javascript',
 			//can't get specific meetups according to zip, maybe get wrong prama
 			sign:'true',
 		}
