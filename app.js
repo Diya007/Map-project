@@ -85,6 +85,7 @@ $(function(){
 
 				//console.log(moment(result.time)._d)
 				var contentString = '<div id="content"><p>Event name: '+result.name+'</p>'+'<p>Address: '+result.venue.address_1+', '+result.venue.city+'</p>'+'<p>'+result.description+'</p>'+'<a href='+result.event_url+'>Links</a></div>'
+				console.log(result.event_url)
 				var LatLng = {
 					lat:lat,
 					lng:lng,
@@ -112,7 +113,7 @@ $(function(){
 		})
 		
 		if(results.length==0){	
-			alert("No Pokemon meetup around")			
+			alert("No meetup found")			
 		}
 		//clear search history 		
 	}
