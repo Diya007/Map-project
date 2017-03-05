@@ -1,9 +1,23 @@
-var map
-var mapDiv
-var results
-var zip
-var markers=[]
+var map;
+var mapDiv;
+var results;
+var zip;
+var markers=[];
 
+
+// ----------------------------header animation 
+$(document).ready(function(){
+	$(window).bind('scroll',function(e){
+		parallaxScroll();
+	});
+	function parallaxScroll(){
+		var scrolledY = $(window).scrollTop();
+		$('.bubble').css({
+			top : (scrolledY*0.53),
+			opacity : 1-(scrolledY/266)
+		});
+	}
+});
 
 function initMap() {
         mapDiv = document.getElementById('map');
@@ -12,18 +26,24 @@ function initMap() {
             	lat: 37.773, lng: -122.431},
             zoom: 8,
         });
-      }
+}
 
-
+// ---------------------------------------initial Map
 $(function(){
 	$("#sub").on("click",function(e){
 		e.preventDefault();
 		deleteMarker();
 		meetupData();
 		zip==$('#zip').val("");
+		
 	})
 	function meetupData(){
 		zip=$('#zip').val();
+		if(zip.length !== 5) {
+			alert('Please input a valid zip code')
+			return false
+		}
+
 		var url="https://api.meetup.com/2/open_events?callback=?"
 		var param={
 			key:'742104225795b17715d16c3866306d',
@@ -62,9 +82,9 @@ $(function(){
 					map.setCenter(centerPosition)
 				}
 
-
 				//console.log(moment(result.time)._d)
 				var contentString = '<div id="content"><p>Event name: '+result.name+'</p>'+'<p>Address: '+result.venue.address_1+', '+result.venue.city+'</p>'+'<p>'+result.description+'</p>'+'<a href='+result.event_url+'>Links</a></div>'
+				console.log(result.event_url)
 				var LatLng = {
 					lat:lat,
 					lng:lng,
@@ -89,15 +109,12 @@ $(function(){
 				})
 			}
 			
-			
 		})
 		
 		if(results.length==0){	
-			alert("No Pokemon meetup around")			
+			alert("No meetup found")			
 		}
-		//clear search history 
-			
-
+		//clear search history 		
 	}
 
 	function setMapOnAll(map){
