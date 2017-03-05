@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -7,31 +8,67 @@
 	<title>Catch a javascript meetup</title>
 </head>
 
-<body>
-	<ul>
-		<h1>Catch a Javascript meetup</h1>
-	</ul>
+<body class="background">
 
-	<form class="type-zip">Your zip code <input type="text" id="zip" name="zip">
-	<input type="submit" id="sub" name="sub">
-	</form>
+		<div class="bubble">
 
-	<div id="map"></div>
+			<div class="light-box">
+				<div class="astronaut">
+					<img src="http://content.mycutegraphics.com/graphics/space/little-girl-astronaut.png"/>
+				</div>
 
-<!-- 	<div class="content hidden" >
-		<p>Event name: <span class="event-name"></span></p>
-		<p>Address: <span class="event-address"></span></p>
-		<p class="description"></p><a class="link" href="">Links</a>
-	</div> -->
+				<div class="rokect">
+					<img src="https://s-media-cache-ak0.pinimg.com/originals/1f/39/21/1f39219c08d52797c7234b074fb75a2f.png" />
+				</div>
+
+				<div class="title">
+						<h1>Find Javascript meetups near you</h1>
+						<h3>Meeting developers in your local community is the single best way to find job leads</h3>
+				</div>
+
+				<div class="submit">
+					<form class="type-zip"> Your zip code <input type="text" id="zip" name="zip"/>
+						<button type="submit" id="sub" name="sub">Search</button>
+					</form>
+				</div>
+			</div>
 
 
-	<script>
-	</script>
+			<div class="intro">
+				<div class="steps">
+					<ul>
+						<li>
+							<h3>Start your search</h3>
+							<p>Type in your zip code, click on the 'Search' button, get yourself onboard!</p>
+							
+						</li>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-	<script type="text/javascript" src="app.js"></script>
-	<script type="text/javascript" src="moment.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB85rQQGvOiJbpX31z7CA9c2bkb3BRGwj0&callback=initMap">
+						<li>
+							<h3>Find your people</h3>
+							<p>Click pins on the map, read descriptions of search results, filter out the ones that match your interest.</p>
+						</li>
 
-</script>
+						<li>
+							<h3>Make a commitment</h3>
+							<p>Put your event in the calendar, shuffle things around, and start meeting your fellow developers.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>		
+
+	<div id="wrap">
+		<div class="content" >
+			<div id="map"></div>
+		</div>		
+	</div>
+
+
+	<footer>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="moment.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB85rQQGvOiJbpX31z7CA9c2bkb3BRGwj0&callback=initMap"></script>
+	</footer>
 </body>
