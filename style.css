@@ -138,10 +138,10 @@ button {
 
 #map{
 	margin: auto;
-	margin-top: 5%;
+	margin-top: 2%;
 	margin-bottom: 5%;
-	width: 60%;
-	height: 550px;
+	width: 70%;
+	height: 6000px;
 	box-shadow: 0px 0px 5px 5px rgba(27, 25, 25, 0.23);
 }
 
