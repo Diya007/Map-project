@@ -1,5 +1,5 @@
 # Javascript meetups finder #
-[Javascript meetups finder](https://lessbuy.herokuapp.com/) is a front-end App that allows user to search javascript meetups using zip code.
+[Javascript meetups finder](https://diya007.github.io/Map-project/) is a front-end App that allows user to search javascript meetups using zip code.
 
 # Technology #
 ## Front End ##
